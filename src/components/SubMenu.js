@@ -15,7 +15,7 @@ const SidebarLink = styled(Link)`
   
   &:hover {
     background: #252831;
-    border-left: 4px solid green;
+    border-left: 4px solid red;
     cursor: pointer;
   }
 `;
@@ -35,7 +35,7 @@ const DropdownLink = styled(Link)`
   font-size: 18px;
   
   &:hover {
-    background: green;
+    background: red;
     cursor: pointer;
   }
 `;
@@ -51,7 +51,7 @@ const SubMenu = ({item}) => {
 			onClick={item.subNav && showSubnav}>
 				<div>
 					{item.icon}
-					<SidebarLabel>{itel.title}</SidebarLabel>
+					<SidebarLabel>{item.title}</SidebarLabel>
 				</div>
 				<div>
 					{

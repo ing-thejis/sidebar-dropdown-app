@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import SidebarData from './SidebarData';
-import Submenu from './Submenu';
+import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 
 const Nav = styled.div`
@@ -48,7 +48,7 @@ const Sidebar = () => {
 
 	return (
 		<>
-			<IconContext.Provider value={{color: #fff}}>
+			<IconContext.Provider value={{color: '#fff'}}>
 				<Nav>
 					<NavIcon to="#">
 						<FaIcons.FaBars onClick={showSidebar} />
@@ -67,7 +67,7 @@ const Sidebar = () => {
 							<AiIcons.AiOutlineClose onClick={showSidebar} />
 						</NavIcon>
 						{SidebarData.map((item, index) => {
-							return <Submenu item={item} key={index} />
+							return <SubMenu item={item} key={index} />
 						})}
 					</SidebarWrap>
 				</SidebarNav>
